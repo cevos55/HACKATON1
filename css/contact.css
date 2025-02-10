@@ -14,7 +14,6 @@
 }
 
 .contact-form .form-control {
-    background: rgba(255, 255, 255, 0.1);
     border: none;
     border-radius: 10px;
     padding: 0.5rem;
@@ -48,13 +47,7 @@
 }
 
 /* Fieldset and Legend Styles */
-fieldset {
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    padding: 0.75rem;
-    margin-bottom: 0.75rem;
-    transition: border-color 0.5s ease;
-}
+
 
 fieldset:hover {
     border-color: rgba(255, 255, 255, 0.5);

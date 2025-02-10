@@ -1,0 +1,101 @@
+/* Contact Form Section */
+.contact-form-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.contact-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+}
+
+.contact-form .btn-contact {
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-form .btn-contact:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(45deg, #2ecc71, #3498db);
+}
+
+/* Fieldset and Legend Styles */
+fieldset {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    transition: border-color 0.5s ease;
+}
+
+fieldset:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0 1rem;
+    color: white;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+legend:hover {
+    background: linear-gradient(45deg, #2ecc71, #3498db);
+}
+
+/* Thank You Message */
+.thank-you-message {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 1rem;
+    }
+}

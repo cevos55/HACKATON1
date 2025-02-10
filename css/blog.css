@@ -1,0 +1,391 @@
+/* Masonry Grid Layout */
+.about-hero{
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+}
+
+.blog-intro{
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+}
+.write{
+    color: #f0f4f8;
+}
+
+.blog-section {
+    padding: 2rem 0;
+    
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.blog-grid.list-view {
+    display: block;
+}
+
+.blog-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.1);
+}
+
+.blog-content {
+    padding: 1.5rem;
+    background: white;
+    color: black;
+}
+
+.blog-content h5 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.blog-content p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.blog-content .btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    transition: background 0.3s ease;
+    margin-right: 0.5rem;
+}
+
+.blog-content .btn:hover {
+    background: var(--secondary-color);
+}
+
+.blog-content .download-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    transition: background 0.3s ease;
+    margin-right: 0.5rem;
+}
+
+.blog-content .download-btn:hover {
+    background: var(--secondary-color);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-top: 1rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.blog-post {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post img, .blog-post video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover img, .blog-post:hover video {
+    transform: scale(1.1);
+}
+
+.blog-post h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+}
+
+.blog-post p {
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+.blog-post .btn {
+    margin-top: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    transition: background 0.3s ease;
+    margin-right: 0.5rem;
+}
+
+.blog-post .btn:hover {
+    background: var(--secondary-color);
+}
+
+.blog-grid.list-view .blog-post {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.blog-grid.list-view .blog-post img, .blog-grid.list-view .blog-post video {
+    width: 150px;
+    height: 150px;
+    margin-right: 1rem;
+}
+
+.blog-grid.list-view .blog-post h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+.blog-grid.list-view .blog-post p {
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+.blog-grid.list-view .blog-post .btn {
+    margin-top: 0.5rem;
+}
+
+/* Recommended Resources Section */
+.recommended-section {
+    background: #f0f4f8;
+    padding: 2rem 0;
+}
+
+.recommended-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--primary-color);
+    color: white;
+}
+
+.recommended-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recommended-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.recommended-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.recommended-card:hover .recommended-image img {
+    transform: scale(1.1);
+}
+
+.recommended-content {
+    padding: 1.5rem;
+    color: black;
+}
+
+.recommended-content h5 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.recommended-content p {
+    margin-bottom: 1rem;
+    color: #ddd;
+}
+
+.recommended-content .btn {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.recommended-content .btn:hover {
+    background: var(--accent-color);
+}
+
+/* Overlay for transition animation */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Resources Section */
+.resources-section {
+    background: #f8f9fa;
+    padding: 2rem 0;
+}
+
+.resource-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    color: black;
+}
+
+.resource-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.resource-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Documentation Hub Format */
+.documentation-hub {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.documentation-hub .doc-card {
+    flex: 1 1 calc(33.333% - 1.5rem);
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem;
+    text-align: center;
+    color: black;
+}
+
+.documentation-hub .doc-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.documentation-hub .doc-card h5 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.documentation-hub .doc-card p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.documentation-hub .doc-card .btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.documentation-hub .doc-card .btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Background Gradient */
+.bg-gradient {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-grid, .recommended-grid {
+        grid-template-columns: 1fr;
+    }
+    .documentation-hub .doc-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* CTA Button Micro-Interactions */
+.cta-btn {
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+}
+
+.cta-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.cta-btn.hovered {
+    background: var(--secondary-color);
+    color: white;
+}

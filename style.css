@@ -56,8 +56,7 @@ body {
 
 .nav-link:hover::after {
     width: 100%;
-}
-/* Hero Section */
+}/* Hero Section */
 .hero {
     height: 100vh;
     position: relative;
@@ -162,6 +161,48 @@ body {
     background: #fff;
     color: #000;
     transform: scale(1.05);
+}
+
+/* Media Queries pour la Responsivité */
+
+/* Pour tablettes et écrans moyens */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .hero .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Pour mobiles */
+@media (max-width: 480px) {
+    .hero {
+        padding: 10px;
+    }
+    
+    .hero-content {
+        padding: 15px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .hero .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
 }
 
 

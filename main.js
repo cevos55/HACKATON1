@@ -36,27 +36,33 @@ window.addEventListener('scroll', () => {
         element.style.transform = `translateY(${yPos}px)`;
     });
 });
-
 // Projects Data
 const projects = [
-    {
-        title: "Innovation Hub",
-        description: "Centre d'innovation technologique de pointe",
-        image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-        category: "Innovation"
-    },
-    {
-        title: "Tech Academy",
-        description: "Formation intensive en développement",
-        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-        category: "Education"
-    },
-    {
-        title: "Smart City",
-        description: "Solutions urbaines intelligentes",
-        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-        category: "Infrastructure"
-    }
+  {
+    title: "Innovation Hub",
+    description: "Centre d'innovation technologique de pointe",
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
+    category: "Innovation"
+  },
+  {
+    title: "Tech Academy",
+    description: "Formation intensive en développement",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
+    category: "Education"
+  },
+  {
+    title: "Smart City",
+    description: "Solutions urbaines intelligentes",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
+    category: "Infrastructure"
+  },
+  {
+    title: "Green Energy",
+    description: "Projet sur les énergies renouvelables",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
+    category: "Environnement"
+  },
+  
 ];
 
 // Load Projects with Animation

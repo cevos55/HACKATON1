@@ -1,188 +1,308 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mountains Tech Hackathon - Bangangté</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/css/home.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mountains Tech Hackathon - Bangangté</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-     <!-- Navigation -->
-     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="img/log 1.png" alt="">Mountains Tech</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/about.html">À propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/events.html">Événements</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/projects.html">Projets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/contact.html">Contact</a>
-                    </li>
-                </ul>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="img/log 1.png" alt="">Mountains Tech</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/about.html">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/events.html">Événements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/projects.html">Projets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div id="particles-js"></div>
+    <video class="hero-video" autoplay muted loop>
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-lines-forming-shapes-71573-large.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <div class="container">
+        <h1 class="mb-4" data-aos="fade-up">Mountains Tech</h1>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Innovons ensemble à Bangangté</p>
+        <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="400">
+          <a href="pages/about.html" class="btn btn-outline-light btn-lg">Découvrir</a>
+          <a href="pages/register.html" class="btn btn-primary btn-lg">Nous Rejoindre</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <h2 class="mb-4">Notre Vision</h2>
+          <div class="about-card">
+            <h3>Innovation</h3>
+            <p>Promouvoir l'innovation technologique dans l'Ouest Cameroun.</p>
+          </div>
+          <div class="about-card">
+            <h3>Formation</h3>
+            <p>Former la prochaine génération de développeurs.</p>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <div class="about-image floating">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="About Us" class="img-fluid rounded-circle">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Nos Événements</h2>
+      <div class="row">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="event-card">
+            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Hackathon">
+            <div class="event-content">
+              <h3>Hackathon 2024</h3>
+              <p>48 heures de coding intensif</p>
+              <a href="#" class="btn btn-outline-light">En savoir plus</a>
             </div>
+          </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div id="particles-js"></div>
-        <video class="hero-video" autoplay muted loop>
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-lines-forming-shapes-71573-large.mp4" type="video/mp4">
-        </video>
-        <div class="hero-content">
-            <div class="container">
-                <h1 class="mb-4" data-aos="fade-up">Mountains Tech</h1>
-                <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Innovons ensemble à Bangangté</p>
-                <div class="d-flex justify-content-center gap-3" data-aos="fade-up" data-aos-delay="400">
-                    <a href="pages/about.html" class="btn btn-outline-light btn-lg left">Découvrir</a>
-                    <a href="pages/register.html" class="btn btn-primary btn-lg left">Nous Rejoindre</a>                </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="event-card">
+            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Workshop">
+            <div class="event-content">
+              <h3>Tech Workshops</h3>
+              <p>Formations pratiques</p>
+              <a href="#" class="btn btn-outline-light">En savoir plus</a>
             </div>
+          </div>
         </div>
-        
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6" data-aos="fade-right">
-                    <h2 class="mb-4">Notre Vision</h2>
-                    <div class="about-card">
-                        <h3>Innovation</h3>
-                        <p>Promouvoir l'innovation technologique dans l'Ouest Cameroun.</p>
-                    </div>
-                    <div class="about-card">
-                        <h3>Formation</h3>
-                        <p>Former la prochaine génération de développeurs.</p>
-                    </div>
-                </div>
-                <div class="col-md-6" data-aos="fade-left">
-                    <div class="about-image floating">
-                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="About Us" class="img-fluid rounded-circle">
-                    </div>
-                </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="event-card">
+            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Conference">
+            <div class="event-content">
+              <h3>Conférences Tech</h3>
+              <p>Rencontres avec des experts</p>
+              <a href="#" class="btn btn-outline-light">En savoir plus</a>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Events Section -->
-    <section id="events" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">Nos Événements</h2>
-            <div class="row">
-                <div class="col-md-4" data-aos="fade-up">
-                    <div class="event-card">
-                        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Hackathon">
-                        <div class="event-content">
-                            <h3>Hackathon 2024</h3>
-                            <p>48 heures de coding intensif</p>
-                            <a href="#" class="btn btn-outline-light">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="event-card">
-                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Workshop">
-                        <div class="event-content">
-                            <h3>Tech Workshops</h3>
-                            <p>Formations pratiques</p>
-                            <a href="#" class="btn btn-outline-light">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="event-card">
-                        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Conference">
-                        <div class="event-content">
-                            <h3>Conférences Tech</h3>
-                            <p>Rencontres avec des experts</p>
-                            <a href="#" class="btn btn-outline-light">En savoir plus</a>
-                        </div>
-                    </div>
-                </div>
+  <!-- Projects Section -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="text-center text-white mb-5" data-aos="fade-up">Nos Projets</h2>
+      <div class="row" id="projectsGrid">
+        <!-- Projects loaded dynamically -->
+      </div>
+      
+      <!-- Bouton Voir Plus ajouté ici -->
+      <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="pages/projects.html" class="btn btn-outline-light">Voir plus</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <!--
+  <section id="blog" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Blog & Ressources</h2>
+      <div class="row" id="blogPosts">
+        Blog posts loaded dynamically --
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center text-white mb-5" data-aos="fade-up">Contactez-nous</h2>
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <form id="contactForm" class="contact-form" data-aos="fade-up">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Votre nom" required>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-5">
-        <div class="container">
-            <h2 class="text-center text-white mb-5" data-aos="fade-up">Nos Projets</h2>
-            <div class="row" id="projectsGrid">
-                <!-- Projects loaded dynamically -->
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Votre email" required>
             </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <!-- <section id="blog" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">Blog & Ressources</h2>
-            <div class="row" id="blogPosts"> -->
-                <!-- Blog posts loaded dynamically -->
-            <!-- </div>
-        </div>
-    </section> -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center text-white mb-5" data-aos="fade-up">Contactez-nous</h2>
-            <div class="row">
-                <div class="col-md-6 mx-auto">
-                    <form id="contactForm" class="contact-form" data-aos="fade-up">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Votre nom" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Votre email" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Votre message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-contact w-100">Envoyer</button>
-                    </form>
-                </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="5" placeholder="Votre message" required></textarea>
             </div>
+            <button type="submit" class="btn btn-contact w-100">Envoyer</button>
+          </form>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer class="py-4 bg-dark text-white">
-        <div class="container text-center">
-            <p>Mountains Tech Hackathon - Bangangté</p>
-            <div class="social-links mt-3">
-                <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
-            </div>
+ <!-- Styles personnalisés pour les animations et le design -->
+<style>
+    /* Animation d'apparition en douceur */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .footer-section {
+      /* Utilisation d'un dégradé pour un rendu moderne */
+      background: linear-gradient(135deg, #232526, #414345);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    
+    /* Transition et effet au survol pour tous les liens */
+    .footer-section a {
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .footer-section a:hover {
+      color: #007BFF; /* Bleu lors du survol */
+      transform: translateY(-3px);
+    }
+    
+    /* Style et animation pour les icônes des réseaux sociaux */
+    .footer-section .social-icon {
+      font-size: 1.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .footer-section .social-icon:hover {
+      color: #007BFF; /* Bleu lors du survol */
+      transform: scale(1.2);
+    }
+    
+    /* Bordure subtile pour le copyright */
+    .footer-section .border-top {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+  
+  <!-- Footer -->
+  <footer class="footer-section text-white py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Colonne Navigation rapide -->
+        <div class="col-md-3">
+          <h5 class="text-uppercase mb-4">Navigation rapide</h5>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a href="#home" class="text-white text-decoration-none">🏠 Accueil</a></li>
+            <li class="mb-3"><a href="#about" class="text-white text-decoration-none">ℹ️ À propos</a></li>
+            <li class="mb-3"><a href="#services" class="text-white text-decoration-none">🛠️ projets</a></li>
+            <li class="mb-3"><a href="#testimonials" class="text-white text-decoration-none">💬 blog</a></li>
+            <li class="mb-3"><a href="#contact" class="text-white text-decoration-none">📞 Contact</a></li>
+          </ul>
         </div>
-    </footer>
+  
+        <!-- Colonne Nos Services -->
+        <div class="col-md-3">
+          <h5 class="text-uppercase mb-4">Nos Services</h5>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a href="#dev" class="text-white text-decoration-none">💻 Développement Web</a></li>
+            <li class="mb-3"><a href="#design" class="text-white text-decoration-none">🎨 UI/UX Design</a></li>
+            <li class="mb-3"><a href="#seo" class="text-white text-decoration-none">📈 SEO & Marketing</a></li>
+            <li class="mb-3"><a href="#support" class="text-white text-decoration-none">🛠️ Support Technique</a></li>
+          </ul>
+        </div>
+  
+        <!-- Colonne Contact -->
+        <div class="col-md-3">
+          <h5 class="text-uppercase mb-4">Contact</h5>
+          <ul class="list-unstyled">
+            <li class="mb-3">📍 Adresse: Yaoundé, Cameroun</li>
+            <li class="mb-3">
+              📧 Email:
+              <a href="mailto:contact@entreprise.com" class="text-white text-decoration-none">
+                contact@entreprise.com
+              </a>
+            </li>
+            <li class="mb-3">
+              📞 Téléphone:
+              <a href="tel:+237690000000" class="text-white text-decoration-none">
+                +237 690 00 00 00
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Colonne Réseaux sociaux -->
+        <div class="col-md-3">
+          <h5 class="text-uppercase mb-4">Suivez-nous</h5>
+          <ul class="list-inline">
+            <li class="list-inline-item me-3">
+              <a href="#" class="text-white social-icon"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item me-3">
+              <a href="#" class="text-white social-icon"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item me-3">
+              <a href="#" class="text-white social-icon"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="list-inline-item me-3">
+              <a href="#" class="text-white social-icon"><i class="fab fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+     
+    </div>
+  </footer>
+  
+  <!-- Font Awesome pour les icônes -->
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  
+  <!-- FontAwesome pour les icônes -->
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+  
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
 </body>
 </html>

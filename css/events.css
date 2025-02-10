@@ -1,0 +1,132 @@
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    
+    background: url('../images/hero-banner.jpg') center/cover no-repeat;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    background-blend-mode: darken;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.3em;
+}
+
+.cta-button {
+    background-color: #37a8f4;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #37a8f4;
+}
+
+/* Events Section */
+.events-section {
+    
+    padding: 60px 5%;
+}
+
+.events-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Event Cards */
+.event-card {
+    background-color: white;
+    color: #001F3F;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Event Image */
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Event Info */
+.event-info {
+    padding: 20px;
+}
+
+.event-info h3 {
+    font-size: 1.8em;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.event-info p {
+    font-size: 1.1em;
+    margin: 8px 0;
+}
+
+/* Button Styling */
+button {
+    background-color: #001F3F;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .events-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .event-card {
+        width: 90%;
+    }
+}    

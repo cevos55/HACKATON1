@@ -9,18 +9,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Gestion de la navbar lors du scroll
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
 
     // Toggle de la visibilité des mots de passe
     const togglePasswordButtons = document.querySelectorAll('.toggle-password');
     togglePasswordButtons.forEach(button => {
         button.addEventListener('click', function () {
+            // On recherche l'input dans le conteneur parent du bouton
             const input = this.parentElement.querySelector('input');
             const icon = this.querySelector('i');
             if (!input || !icon) return;
@@ -37,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Gestion de la validation des formulaires
+    // Récupération des formulaires et affectation des événements submit
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
 
@@ -50,6 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+/**
+ * Gestion de la soumission du formulaire de connexion.
+ * Appel d'une API simulée redirigeant vers le tableau de bord après traitement.
+ */
 function handleLoginSubmit(e) {
     e.preventDefault();
     const form = e.target;
@@ -81,18 +88,52 @@ function handleLoginSubmit(e) {
     btnText.classList.add('d-none');
     spinner.classList.remove('d-none');
 
-    // Simulation d'un appel API
-    setTimeout(() => {
+    // Préparation des données à envoyer
+    const formData = new URLSearchParams();
+    formData.append('email', email.value);
+    formData.append('password', password.value);
+
+    // Envoi des données via fetch()
+    fetch('http://localhost/votre-projet/login.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: formData.toString()
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erreur lors de la connexion au serveur : ' + response.status);
+        }
+        return response.json();
+    })
+    .then(data => {
         // Réinitialiser l'état du bouton
         submitBtn.disabled = false;
         btnText.classList.remove('d-none');
         spinner.classList.add('d-none');
 
-        // Redirection vers le tableau de bord (exemple)
-        window.location.href = '../index.html';
-    }, 2000);
+        if (data.success) {
+            alert('Connexion réussie');
+            // Rediriger vers la page d'accueil ou le tableau de bord
+            window.location.href = '../index.html';
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Erreur:', error);
+        submitBtn.disabled = false;
+        btnText.classList.remove('d-none');
+        spinner.classList.add('d-none');
+        alert('Une erreur est survenue lors de la connexion au serveur : ' + error.message);
+    });
 }
 
+/**
+ * Gestion de la soumission du formulaire d'inscription.
+ * Les données sont envoyées via fetch() au script PHP pour l'enregistrement.
+ */
 function handleRegisterSubmit(e) {
     e.preventDefault();
     const form = e.target;
@@ -148,23 +189,70 @@ function handleRegisterSubmit(e) {
     btnText.classList.add('d-none');
     spinner.classList.remove('d-none');
 
-    // Simulation d'un appel API
-    setTimeout(() => {
+    // Préparation des données à envoyer
+    const formData = new URLSearchParams();
+    formData.append('firstName', firstName.value);
+    formData.append('lastName', lastName.value);
+    formData.append('email', email.value);
+    formData.append('password', password.value);
+
+    fetch('http://localhost/votre-projet/register.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: formData.toString()
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erreur lors de la connexion au serveur : ' + response.status);
+        }
+        return response.text(); // On lit la réponse en texte
+    })
+    .then(text => {
+        try {
+            return JSON.parse(text); // Tenter de parser le JSON
+        } catch (err) {
+            throw new Error('La réponse n\'est pas un JSON valide: ' + text);
+        }
+    })
+    .then(data => {
         // Réinitialiser l'état du bouton
         submitBtn.disabled = false;
         btnText.classList.remove('d-none');
         spinner.classList.add('d-none');
 
-        // Redirection vers la page de connexion
-        window.location.href = 'login.html';
-    }, 2000);
+        if (data.success) {
+            // Redirection vers la page de connexion en cas d'inscription réussie
+            window.location.href = 'login.html';
+        } else {
+            alert(data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Erreur:', error);
+        submitBtn.disabled = false;
+        btnText.classList.remove('d-none');
+        spinner.classList.add('d-none');
+        alert('Une erreur est survenue lors de la connexion au serveur: ' + error.message);
+    });
 }
 
+/**
+ * Vérifie que l'adresse email est valide.
+ * @param {string} email
+ * @returns {boolean}
+ */
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email.toLowerCase());
 }
 
+/**
+ * Affiche un message d'erreur en ajoutant la classe 'is-invalid' à l'input concerné.
+ * @param {HTMLElement} input
+ * @param {string} message
+ */
 function showError(input, message) {
     input.classList.add('is-invalid');
     const feedback = input.parentElement.querySelector('.invalid-feedback');
@@ -173,6 +261,10 @@ function showError(input, message) {
     }
 }
 
+/**
+ * Réinitialise les validations en supprimant la classe 'is-invalid' de tous les inputs du formulaire.
+ * @param {HTMLFormElement} form
+ */
 function resetValidation(form) {
     form.querySelectorAll('.is-invalid').forEach(input => {
         input.classList.remove('is-invalid');

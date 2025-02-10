@@ -56,7 +56,9 @@ body {
 
 .nav-link:hover::after {
     width: 100%;
-}/* Hero Section */
+
+}
+/* Hero Section */
 .hero {
     height: 100vh;
     position: relative;

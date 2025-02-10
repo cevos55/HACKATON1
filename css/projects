@@ -1,0 +1,116 @@
+/* Global styles */
+body {
+    background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+    color: #ffffff;
+}
+
+/* Navigation */
+.navbar {
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a9eff;
+}
+
+/* Hero section */
+.about-hero {
+    padding-top: 120px;
+    background: linear-gradient(135deg, #2c3e50, #3498db);}
+
+/* Cards */
+.card {
+    background: linear-gradient(145deg, #112240 0%, #0a192f 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(74, 158, 255, 0.2);
+}
+
+.card-body {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #4a9eff 0%, #2d5af0 100%);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #2d5af0 0%, #4a9eff 100%);
+    transform: translateY(-2px);
+}
+
+/* Project list */
+.list-group-item {
+    background: linear-gradient(145deg, #112240 0%, #0a192f 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.list-group-item:hover {
+    background: linear-gradient(145deg, #0a192f 0%, #112240 100%);
+}
+
+/* Form elements */
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #4a9eff;
+    box-shadow: 0 0 0 0.2rem rgba(74, 158, 255, 0.25);
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #000000, #1a1a1a);
+}
+
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #4a9eff !important;
+}
+
+/* Badges */
+.badge {
+    padding: 0.5em 1em;
+}
+
+.badge.bg-primary {
+    background: linear-gradient(45deg, #4a9eff 0%, #2d5af0 100%) !important;
+}
+
+.badge.bg-warning {
+    background: linear-gradient(45deg, #ffd700 0%, #ffa500 100%) !important;
+}
+
+.badge.bg-success {
+    background: linear-gradient(45deg, #00ff00 0%, #008000 100%) !important;
+}
+h2, p {
+    color: #ffffff;
+}
+.card-body h5 {
+    color: #ffffff;
+}
+.mb-3 {
+    color: #ffffff;
+}
